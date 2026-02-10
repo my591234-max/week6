@@ -36,7 +36,7 @@ function Login() {
       alert('登入成功！');
 
       // 導向後台或首頁
-      navigate('/');
+      navigate('/home');
     } catch (error) {
       alert('登入失敗，請確認帳號密碼');
       console.log('Error:', error.response?.data);

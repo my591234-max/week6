@@ -1,4 +1,4 @@
-import { createHashRouter } from 'react-router-dom';
+import { createHashRouter, Navigate } from 'react-router-dom';
 
 import FrontendLayout from './layout/FrontendLayout';
 import Cart from './views/front/Cart';
@@ -16,8 +16,10 @@ export const router = createHashRouter([
     children: [
       {
         index: true, // Home is the default route
-        element: <Home />,
+        // element: <Home />,
+        element: <Navigate to="/login" replace />, // ← 自動導向 login
       },
+      { path: 'home', element: <Home /> },
       {
         path: 'singleproduct/:id',
         element: <SingleProduct />,
