@@ -1,0 +1,8 @@
+// src/views/front/Home.jsx
+import { Link } from 'react-router-dom';
+
+const Home = () => {
+  return <h1 className="mt-5">首頁</h1>;
+};
+
+export default Home;
